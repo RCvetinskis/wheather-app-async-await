@@ -8,14 +8,14 @@ const dataPlace = document.getElementById("dataPlace")
 
 
 async function fetchUrl(city){
-  const response = await   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
-    const result = await response.json()
+ 
 
     try{
+        const response = await   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`)
+        const result = await response.json()
         appendData(result)
     } catch(error){
-        alert("Tokio miesto nera")
-        console.log(error)
+            console.log(error)   
     }
        
 }
